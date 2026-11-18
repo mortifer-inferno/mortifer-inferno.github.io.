@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MORTIFER (Affan) — Web Developer Portfolio | Animated Websites, Stores & Booking Sites</title>
+<meta name="description" content="MORTIFER (Affan) is a web developer building animated, mobile-friendly websites: online stores, taxi and tour booking sites and IELTS learning platforms. See live projects and get in touch.">
+<meta name="keywords" content="MORTIFER web developer, mortifer web developer, MORTIFER portfolio, Affan web developer, hire MORTIFER, MORTIFER, mortifer, Affan, mortifer-inferno, mortifer-inferno github, web developer, freelance web developer, website designer, frontend developer, web developer portfolio, portfolio website, GSAP animation, animated website, responsive website design, custom website, landing page design, web design services, hire web developer, website developer India, e-commerce website, online store website, fashion store website, Modestia Dux, luxury fashion store, shopping cart website, taxi booking website, Kerala taxi, Kerala tour packages, Urban Cabs, Kochi cab, airport taxi Kerala, chauffeur car rental, cab booking website, IELTS coaching website, IELTS preparation, IELTS practice test, IELTS writing checker, study abroad consultant, study abroad website, visa checklist, Oltera Language Studio, language studio website, GitHub Pages website">
+<meta name="author" content="MORTIFER (Affan)">
+<meta name="google-site-verification" content="R-SHiugMUBb0_GUMqrOgNwIX_E6ATP0AJtIbn6kDp38" />
+<meta name="application-name" content="MORTIFER Portfolio">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#07070c">
+<meta name="color-scheme" content="dark light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MORTIFER Portfolio">
+<meta property="og:title" content="MORTIFER (Affan) — Web Developer Portfolio">
+<meta property="og:description" content="Animated, mobile-friendly websites: online stores, taxi booking sites and IELTS platforms. See the live projects.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MORTIFER (Affan) — Web Developer Portfolio">
+<meta name="twitter:description" content="Animated, mobile-friendly websites: online stores, taxi booking sites and IELTS platforms. See the live projects.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Person","name":"Affan","alternateName":"MORTIFER","jobTitle":"Web Developer","email":"mailto:mohammed.affanvh@gmail.com","telephone":"+918129763926","sameAs":["https://github.com/mortifer-inferno"],"knowsAbout":["Web development","Responsive web design","GSAP animation","E-commerce websites","Booking websites","IELTS learning platforms"]},
+{"@type":"ItemList","name":"Projects by MORTIFER","itemListElement":[
+{"@type":"ListItem","position":1,"item":{"@type":"WebSite","name":"Modestia Dux","url":"https://mortifer-inferno.github.io/my-shop-demo-advanced","description":"Luxury fashion online store with categories, product options and a working cart."}},
+{"@type":"ListItem","position":2,"item":{"@type":"WebSite","name":"Urban Cabs","url":"https://mortifer-inferno.github.io/kayal-taxi","description":"Kerala taxi and tour-package website with reservation forms, curated routes and a vehicle fleet."}},
+{"@type":"ListItem","position":3,"item":{"@type":"WebSite","name":"Oltera Language Studio","url":"https://mortifer-inferno.github.io/oltera","description":"IELTS preparation and study abroad guidance with a timed reading test, writing checker and visa checklists."}}]}
+]}
+</script>
+<style>
+:root{--bg:#f4f1ea;--fg:#14110f;--mut:#5d564d;--card:#fff;--line:#d9d2c5;--a:#d4380d;--b:#7c3aed;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07070c;--fg:#f3f1ee;--mut:#9a96a3;--card:#111119;--line:#24242f;--a:#ff5a36;--b:#8b5cf6}}
+:root[data-theme="dark"]{--bg:#07070c;--fg:#f3f1ee;--mut:#9a96a3;--card:#111119;--line:#24242f;--a:#ff5a36;--b:#8b5cf6}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+canvas#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.6}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none;opacity:.35}
+.o1{width:420px;height:420px;background:var(--a);left:-120px;top:10vh}
+.o2{width:380px;height:380px;background:var(--b);right:-100px;top:50vh}
+#glow{position:fixed;left:0;top:0;width:460px;height:460px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,color-mix(in srgb,var(--a) 30%,transparent),transparent 65%)}
+.type{min-height:2.4em}
+.type span{border-right:2px solid var(--a);padding-right:4px;animation:bl 1s step-end infinite}
+@keyframes bl{50%{border-color:transparent}}
+#pre{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;text-align:center}
+#pre b{font-size:clamp(4rem,16vw,11rem);font-weight:900;letter-spacing:-.04em;display:block;line-height:1}
+#pre span{letter-spacing:.4em;font-size:.75rem;color:var(--mut)}
+#cur{display:none;position:fixed;left:0;top:0;width:8px;height:8px;border-radius:50%;background:var(--a);z-index:91;pointer-events:none}
+#ring{position:fixed;left:0;top:0;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--a);background:rgba(255,90,54,0);z-index:90;pointer-events:none}
+.tr{position:fixed;left:0;top:0;width:7px;height:7px;border-radius:50%;background:linear-gradient(var(--a),var(--b));pointer-events:none;z-index:88}
+
+::selection{background:var(--a);color:#fff}
+::-webkit-scrollbar{width:12px}
+::-webkit-scrollbar-track{background:var(--bg);border-left:1px solid var(--line)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--a),var(--b));border-radius:99px;border:3px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{border-width:1px}
+@supports not selector(::-webkit-scrollbar){html{scrollbar-width:thin;scrollbar-color:var(--a) var(--bg)}}
+@media(pointer:coarse){#cur,#ring,#glow{display:none}}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;display:flex;justify-content:space-between;padding:16px 5vw;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav b{letter-spacing:.3em;font-size:.85rem}
+nav div a{text-decoration:none;color:var(--mut);margin-left:22px;font-size:.82rem}
+nav div a:hover{color:var(--a)}
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--a),var(--b));transform-origin:0 50%;transform:scaleX(0);z-index:30}
+main,footer{position:relative;z-index:1}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 5vw 60px}
+.tag{color:var(--a);letter-spacing:.35em;font-size:.72rem;text-transform:uppercase}
+h1{font-size:clamp(3.2rem,16vw,13rem);line-height:.9;margin:.1em 0;font-weight:900;letter-spacing:-.05em;display:flex;overflow:hidden;perspective:700px}
+h1 span{display:inline-block;background:linear-gradient(120deg,var(--fg),var(--a) 55%,var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.02em}
+.sub{font-size:clamp(1.1rem,2.6vw,1.7rem);color:var(--mut);max-width:760px}
+.btn{display:inline-block;padding:14px 30px;border-radius:99px;text-decoration:none;font-weight:700;margin:26px 14px 0 0}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));color:#fff}
+.btn.g{border:1px solid var(--line)}
+.scroll{position:absolute;bottom:26px;left:5vw;font-size:.7rem;letter-spacing:.3em;color:var(--mut)}
+.rows{padding:30px 0;overflow:hidden;position:relative;z-index:1;border-block:1px solid var(--line)}
+.row{white-space:nowrap;font-size:clamp(2rem,6vw,5rem);font-weight:900;letter-spacing:-.02em;width:max-content;color:transparent;-webkit-text-stroke:1px var(--mut)}
+.row.f{color:var(--fg);-webkit-text-stroke:0}
+.man{padding:20vh 6vw;max-width:1200px;margin:auto}
+.man p{font-size:clamp(1.6rem,4.6vw,3.6rem);font-weight:800;line-height:1.15;letter-spacing:-.02em;margin:0}
+.man .w{display:inline-block;opacity:.14;margin-right:.25em}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1180px;margin:auto;padding:0 5vw 14vh}
+.stat{padding:34px 20px;border:1px solid var(--line);border-radius:22px;background:var(--card);text-align:center}
+.stat b{font-size:clamp(3rem,7vw,5rem);display:block;line-height:1;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--mut);font-size:.85rem}
+.head{padding:0 5vw 40px;max-width:1180px;margin:auto}
+h2{font-size:clamp(2.2rem,6vw,4.6rem);margin:.1em 0;letter-spacing:-.03em;line-height:1}
+.hs{overflow:hidden}
+.track{display:flex;gap:4vw;padding:0 5vw}
+.pan{flex:0 0 min(86vw,980px);min-height:68vh;border:1px solid var(--line);border-radius:28px;background:var(--card);display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden}
+.pm{position:relative;padding:44px 34px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.pm i{position:absolute;right:-40px;top:-40px;font-style:normal;font-size:16rem;font-weight:900;opacity:.14;line-height:1}
+.pm h4{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 8px;line-height:1.05;letter-spacing:-.02em;position:relative}
+.pm p{margin:0;opacity:.8;position:relative}
+.pi{padding:38px 34px;display:flex;flex-direction:column;justify-content:center}
+.pi small{color:var(--a);letter-spacing:.3em;font-size:.7rem}
+.pi h3{font-size:2rem;margin:.3em 0;letter-spacing:-.02em}
+.pi p{color:var(--mut)}
+.chips span{display:inline-block;font-size:.72rem;padding:5px 13px;border-radius:99px;border:1px solid var(--line);color:var(--mut);margin:0 6px 6px 0}
+.pi .btn{align-self:flex-start;margin-top:14px}
+.insp{padding:20vh 6vw 12vh;text-align:center;max-width:1100px;margin:auto}
+.insp h2 span{display:block}
+.insp p{color:var(--mut);max-width:620px;margin:20px auto 0;font-size:1.1rem}
+.cta{text-align:center;padding:12vh 5vw}
+.cta h2{font-size:clamp(2.6rem,9vw,8rem)}
+footer{border-top:1px solid var(--line);padding:70px 5vw 40px;overflow:hidden}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;max-width:1180px;margin:auto}
+footer h5{margin:0 0 12px;letter-spacing:.25em;font-size:.7rem;color:var(--a)}
+footer a{display:block;text-decoration:none;color:var(--mut);margin-bottom:8px;font-size:.92rem}
+footer a:hover{color:var(--fg)}
+footer p{color:var(--mut);margin:0;font-size:.92rem}
+.big{font-size:clamp(3rem,17vw,15rem);font-weight:900;letter-spacing:-.05em;line-height:.9;text-align:center;margin:50px 0 10px;color:transparent;-webkit-text-stroke:1px var(--line);white-space:nowrap}
+.cr{text-align:center;color:var(--mut);font-size:.8rem;border-top:1px solid var(--line);padding-top:22px;max-width:1180px;margin:auto}
+.cr b{color:var(--fg)}
+.sec{padding:14vh 5vw;max-width:1180px;margin:auto}
+.tk{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.tk span{padding:12px 22px;border:1px solid var(--line);border-radius:99px;background:var(--card);font-weight:600;transition:.3s}
+.tk span:hover{border-color:var(--a);color:var(--a);transform:translateY(-4px)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:34px}
+.sv{padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--card);transition:.3s}
+.sv:hover{border-color:var(--a);transform:translateY(-6px)}
+.sv b{color:var(--a);font-size:.8rem;letter-spacing:.3em}
+.sv h3{margin:.5em 0 .3em;font-size:1.4rem}
+.sv p{color:var(--mut);margin:0}
+.dd{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;padding:36px 0;border-top:1px solid var(--line)}
+.dd h3{font-size:clamp(1.8rem,4vw,3rem);margin:0;letter-spacing:-.02em;line-height:1.05}
+.dd small{color:var(--a);letter-spacing:.3em;font-size:.7rem}
+.dd ul{list-style:none;margin:0;padding:0}
+.dd li{padding:10px 0;border-bottom:1px solid var(--line);color:var(--mut)}
+.dd li:before{content:"→ ";color:var(--a)}
+.st{display:grid;grid-template-columns:100px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--line)}
+.st b{font-size:3.6rem;line-height:1;color:transparent;-webkit-text-stroke:1px var(--a)}
+.st h3{margin:0 0 6px;font-size:1.6rem}
+.st p{margin:0;color:var(--mut);max-width:620px}
+.story p{font-size:clamp(1.1rem,2vw,1.4rem);color:var(--mut);max-width:820px;margin:0 0 22px;line-height:1.7}
+.story p:first-of-type:first-letter{float:left;font-size:4.6rem;line-height:.8;padding:8px 12px 0 0;font-weight:900;color:var(--a)}
+.del{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 48px;margin-top:30px}
+.del div{padding:24px 0;border-top:1px solid var(--line);display:flex;gap:18px}
+.del b{color:var(--a);font-size:1.4rem}
+.del h3{margin:0 0 4px;font-size:1.3rem}
+.del p{margin:0;color:var(--mut)}
+.pl{color:var(--mut);margin:6px 0 0}
+.pp{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.pp button{all:unset;cursor:pointer;padding:12px 22px;border:1px solid var(--line);border-radius:99px;font-weight:700;background:var(--card);transition:.3s}
+.pp button:hover{border-color:var(--a)}
+.pp button.on{background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border-color:transparent}
+.pbox{border:1px solid var(--line);border-radius:24px;background:var(--card);padding:34px}
+.pbox h3{margin:0 0 16px;font-size:1.9rem}
+.pbox ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 30px}
+.pbox li{color:var(--mut);padding:10px 0;border-bottom:1px solid var(--line)}
+.pbox li:before{content:"✦ ";color:var(--a)}
+.rules p{font-size:clamp(1.4rem,3.6vw,2.6rem);font-weight:800;line-height:1.2;letter-spacing:-.02em;margin:0;padding:24px 0;border-top:1px solid var(--line);opacity:.18}
+h1.pulse{animation:pls 3.2s ease-in-out infinite}
+@keyframes pls{50%{filter:drop-shadow(0 0 30px color-mix(in srgb,var(--a) 45%,transparent))}}
+.sec>h2 .w{display:inline-block}
+.sv:hover,.stat:hover,.pbox:hover,.pan:hover{background-image:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--a) 14%,transparent),transparent 70%)}
+.btn.p{position:relative;overflow:hidden}
+.btn.p:after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .7s}
+.btn.p:hover:after{left:130%}
+nav div a{position:relative}
+nav div a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:100%;background:var(--a);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav div a:hover:after{transform:scaleX(1)}
+footer a{transition:.25s}
+footer a:hover{padding-left:10px;color:var(--a)}
+.tk span:hover{transform:translateY(-5px) rotate(-3deg)}
+.big span{display:inline-block;transition:.3s}
+.big span:hover{-webkit-text-stroke-color:var(--a);color:var(--a);transform:translateY(-14px)}
+.sv ul{margin:14px 0 0;padding:0;list-style:none}
+.sv li{padding:6px 0;color:var(--mut);font-size:.9rem}
+.sv li:before{content:"✓ ";color:var(--a);font-weight:700}
+.cmp{margin-top:30px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card)}
+.cmp div{display:grid;grid-template-columns:.8fr 1fr 1fr;border-top:1px solid var(--line)}
+.cmp div:first-child{border:0;font-weight:800;background:color-mix(in srgb,var(--a) 10%,transparent)}
+.cmp span{padding:16px 20px;color:var(--mut)}
+.cmp span:first-child{color:var(--fg);font-weight:700}
+.cmp div:not(:first-child) span:last-child{color:var(--fg)}
+.ck{margin-top:30px;display:grid;gap:10px}
+.ck label{display:flex;gap:14px;align-items:center;padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:var(--card);cursor:pointer;transition:.3s}
+.ck label:hover{border-color:var(--a)}
+.ck input{accent-color:var(--a);width:20px;height:20px;flex:none}
+.ck label.d{opacity:.55;text-decoration:line-through}
+.bar{height:8px;border-radius:99px;background:var(--line);margin-top:26px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b))}
+.pct{color:var(--mut);margin-top:10px;font-size:.95rem}
+@media(max-width:820px){.cmp span{padding:12px;font-size:.85rem}}
+.cd{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:34px}
+.cd a{display:block;padding:18px 28px;border:1px solid var(--line);border-radius:20px;background:var(--card);text-decoration:none;font-weight:700;transition:border-color .3s,color .3s}
+.cd a:hover{border-color:var(--a);color:var(--a)}
+.cd small{display:block;color:var(--a);letter-spacing:.3em;font-size:.65rem;margin-bottom:4px}
+.q{border-top:1px solid var(--line)}
+.q button{all:unset;cursor:pointer;display:flex;justify-content:space-between;width:100%;padding:24px 0;font-size:1.2rem;font-weight:700;box-sizing:border-box}
+.q button span{color:var(--a);font-size:1.6rem;transition:.3s}
+.q.o button span{transform:rotate(45deg)}
+.ans{height:0;overflow:hidden}
+.ans p{margin:0 0 24px;color:var(--mut);max-width:720px}
+@media(max-width:820px){.dd{grid-template-columns:1fr}.st{grid-template-columns:70px 1fr}}
+@media(max-width:820px){.pan{grid-template-columns:1fr;min-height:0}.pm{min-height:260px}.stats{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.track{flex-direction:column}.pan{flex:none;width:100%}nav div a:nth-child(n+3){display:none}}
+</style>
+</head>
+<body>
+<div id="pre"><div><b id="pc">0</b><span>LOADING MORTIFER</span></div></div>
+<div id="cur"></div><div id="ring"></div><div id="prog"></div>
+<canvas id="bg"></canvas><div class="orb o1"></div><div class="orb o2"></div><div id="glow"></div>
+<nav><b>MORTIFER</b><div><a href="#work">Work</a><a href="#services">Services</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero">
+<div class="tag">Affan · Web Developer & Builder</div>
+<h1 id="h1">MORTIFER</h1>
+<div class="sub type"><span id="tw"></span></div>
+<div><a class="btn p mag" href="#work">See my work</a><a class="btn g mag" href="https://github.com/mortifer-inferno" target="_blank" rel="noopener">GitHub ↗</a></div>
+<div class="scroll">SCROLL ↓</div>
+</section>
+<div class="rows"><div class="row f" id="r1">MODESTIA DUX ✦ URBAN CABS ✦ OLTERA ✦ MODESTIA DUX ✦ URBAN CABS ✦ OLTERA ✦</div><div class="row" id="r2">DESIGN ✦ BUILD ✦ SHIP ✦ DESIGN ✦ BUILD ✦ SHIP ✦ DESIGN ✦ BUILD ✦ SHIP ✦</div></div>
+<section class="man" id="about"><p id="man">Every project starts as an empty page. I turn it into a store, a booking engine or a study platform, and I ship it for real. No templates, no shortcuts, just obsessive detail.</p></section>
+<div class="stats"><div class="stat"><b data-n="3">0</b><span>Live websites</span></div><div class="stat"><b data-n="3">0</b><span>Industries: fashion, travel, education</span></div><div class="stat"><b data-n="1">0</b><span>Builder behind all of it</span></div></div>
+<section class="sec story" id="story"><div class="tag">My story</div><h2>Hi, I’m Affan.</h2>
+<p>Online, I go by MORTIFER. I build websites from a completely blank page: the layout, the interactions, the details and the launch. Every project starts with one question: what should this feel like the moment someone lands on it?</p>
+<p>So far that has meant a quiet luxury fashion store, a chauffeured travel service across Kerala, and a language studio that helps students prepare for IELTS and study abroad. Three very different businesses, and each one got its own look, its own voice and its own tools.</p>
+<p>I care about the parts people feel more than the parts they see: how a page loads, how a button responds, how a section appears as you scroll. That is where a website stops being a page and starts being an experience.</p>
+<p>I’m always learning, always shipping, and always looking for the next blank page.</p></section>
+<section class="sec" id="toolkit"><div class="tag">Toolkit</div><h2>What I build with.</h2><div class="tk"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GSAP animation</span><span>Responsive layouts</span><span>Light &amp; dark themes</span><span>Shopping carts</span><span>Booking forms</span><span>On-page SEO</span><span>GitHub Pages hosting</span></div></section>
+<div class="head" id="work"><div class="tag">Selected work</div><h2>Real sites. Live right now.</h2></div>
+<section class="hs"><div class="track" id="track">
+<article class="pan"><div class="pm" style="background:linear-gradient(135deg,#0B172E,#25508f)"><i>01</i><h4>Restraint, well made.</h4><p>A small collection of designer fashion, built to last.</p></div>
+<div class="pi"><small>FASHION · E-COMMERCE</small><h3>Modestia Dux</h3><p>A luxury storefront with categories, product options, a working cart and a feedback section. Quiet, elegant and fast.</p><div class="chips"><span>Cart</span><span>Responsive</span><span>Catalogue</span></div><a class="btn p mag" href="https://mortifer-inferno.github.io/my-shop-demo-advanced" target="_blank" rel="noopener">Visit live →</a></div></article>
+<article class="pan"><div class="pm" style="background:linear-gradient(135deg,#0c4a43,#23a07f)"><i>02</i><h4>The backwaters wait.</h4><p>Chauffeured travel across Kerala.</p></div>
+<div class="pi"><small>TRAVEL · BOOKING</small><h3>Urban Cabs</h3><p>A Kerala taxi and tour-package site with a reservation form, five curated routes, a six-car fleet and search-optimised content.</p><div class="chips"><span>Booking form</span><span>Packages</span><span>SEO</span></div><a class="btn p mag" href="https://mortifer-inferno.github.io/kayal-taxi" target="_blank" rel="noopener">Visit live →</a></div></article>
+<article class="pan"><div class="pm" style="background:linear-gradient(135deg,#232323,#7a6234)"><i>03</i><h4>Language that opens doors.</h4><p>IELTS coaching and study abroad guidance.</p></div>
+<div class="pi"><small>EDUCATION · INTERACTIVE</small><h3>Oltera Language Studio</h3><p>An IELTS prep platform with a timed reading test, a Task 2 writing checker, visa checklists, study plans and 18 destinations.</p><div class="chips"><span>Timed test</span><span>Checklists</span><span>Light & dark</span></div><a class="btn p mag" href="https://mortifer-inferno.github.io/oltera" target="_blank" rel="noopener">Visit live →</a></div></article>
+</div></section>
+<section class="sec" id="services"><div class="tag">Services</div><h2>What I can build for you.</h2><div class="sg"><div class="sv"><b>01</b><h3>Storefronts</h3><p>Elegant online shops with product options and a smooth cart.</p></div><div class="sv"><b>02</b><h3>Booking sites</h3><p>Service and travel websites with clear packages and easy reservation forms.</p></div><div class="sv"><b>03</b><h3>Learning platforms</h3><p>Interactive sites with tests, checklists and tools that keep visitors engaged.</p></div><div class="sv"><b>04</b><h3>Motion design</h3><p>Scroll effects, reveals and hover details that make a site feel alive.</p></div></div></section>
+<section class="sec" id="ways"><div class="tag">Work together</div><h2>Ways to work together.</h2><p class="pl">Pick the size that fits. Every option is designed and built by me, and quoted to the project.</p><div class="sg">
+<div class="sv"><b>01</b><h3>One-page site</h3><p>A focused landing page that makes one thing very clear.</p><ul><li>Custom design</li><li>Smooth animation</li><li>Contact or booking section</li><li>Live link to share</li></ul></div>
+<div class="sv"><b>02</b><h3>Full website</h3><p>Multiple pages with one complete look and feel.</p><ul><li>Home, services and about pages</li><li>Forms and interactive features</li><li>Search-friendly structure</li><li>Responsive on every screen</li></ul></div>
+<div class="sv"><b>03</b><h3>Custom build</h3><p>For stores, booking systems and tools that need extra features.</p><ul><li>Carts and checkout flow</li><li>Booking and enquiry forms</li><li>Interactive tests and tools</li><li>Light and dark themes</li></ul></div>
+</div></section>
+<section class="sec" id="industries"><div class="tag">Industries</div><h2>Built for any business.</h2><p class="pl">These are the kinds of businesses I love building for.</p><div class="tk ind"><span>Fashion &amp; retail</span><span>Travel &amp; tourism</span><span>Education &amp; coaching</span><span>Restaurants &amp; cafés</span><span>Clinics &amp; wellness</span><span>Real estate</span><span>Events &amp; weddings</span><span>Local services</span><span>Photographers &amp; creators</span><span>Fitness &amp; gyms</span><span>Startups</span><span>Personal brands</span></div></section>
+<section class="sec" id="deliver"><div class="tag">What you get</div><h2>Everything, end to end.</h2><div class="del">
+<div><b>✦</b><div><h3>A custom design</h3><p>A look and feel made for your brand, not a recycled layout.</p></div></div>
+<div><b>✦</b><div><h3>A responsive build</h3><p>Pages that adapt cleanly from phones to large desktop screens.</p></div></div>
+<div><b>✦</b><div><h3>Smooth animation</h3><p>Scroll effects and hover details that make the site feel premium.</p></div></div>
+<div><b>✦</b><div><h3>Working features</h3><p>Carts, booking forms, checklists and interactive tools where you need them.</p></div></div>
+<div><b>✦</b><div><h3>Search-friendly content</h3><p>Titles, descriptions and structure that help people find you.</p></div></div>
+<div><b>✦</b><div><h3>A live link</h3><p>Your website published and ready to share the same day it’s finished.</p></div></div>
+</div></section>
+<section class="sec" id="compare"><div class="tag">Compare</div><h2>Handcrafted vs. template.</h2><div class="cmp">
+<div><span>Feature</span><span>Typical template</span><span>Built by MORTIFER</span></div>
+<div><span>Design</span><span>Looks like many other sites</span><span>Made for your brand</span></div>
+<div><span>Animation</span><span>Basic or none</span><span>Custom scroll and hover motion</span></div>
+<div><span>Features</span><span>Limited to what the template allows</span><span>Built around what you need</span></div>
+<div><span>Mobile</span><span>Often an afterthought</span><span>Designed for small screens first</span></div>
+<div><span>Personality</span><span>Generic</span><span>Unmistakably yours</span></div>
+</div></section>
+<section class="sec" id="process"><div class="tag">Process</div><h2>From idea to live site.</h2>
+<div class="st"><b>01</b><div><h3>Discover</h3><p>We talk through your goal, your audience and what makes your business different.</p></div></div>
+<div class="st"><b>02</b><div><h3>Design</h3><p>I shape the look and feel, from colours and type to how every section moves.</p></div></div>
+<div class="st"><b>03</b><div><h3>Build</h3><p>I code it by hand, responsive from phone to widescreen, with the details polished.</p></div></div>
+<div class="st"><b>04</b><div><h3>Launch</h3><p>Your site goes live at a real link you can share with the world.</p></div></div></section>
+<section class="sec" id="planner"><div class="tag">Plan it</div><h2>Plan your website.</h2><p class="pl">Pick the kind of site you want and see what I would suggest building into it.</p>
+<div class="pp" id="pp"><button class="on" data-k="store">Online store</button><button data-k="book">Booking site</button><button data-k="learn">Learning platform</button><button data-k="biz">Business site</button><button data-k="port">Personal brand</button></div>
+<div class="pbox"><h3 id="pt"></h3><ul id="pf"></ul></div></section>
+<section class="sec" id="principles"><div class="tag">Principles</div><h2>How I work.</h2><div class="sg">
+<div class="sv"><b>01</b><h3>Detail over decoration</h3><p>Every spacing, shadow and transition has a reason to be there.</p></div>
+<div class="sv"><b>02</b><h3>Built for every screen</h3><p>If it only looks good on one device, it isn’t finished.</p></div>
+<div class="sv"><b>03</b><h3>Motion with purpose</h3><p>Animation should guide attention, never get in the way.</p></div>
+<div class="sv"><b>04</b><h3>Clear structure</h3><p>Visitors should know where to look and what to do within seconds.</p></div>
+<div class="sv"><b>05</b><h3>Find-ability</h3><p>A great site is useless if nobody can find it, so SEO is built in.</p></div>
+<div class="sv"><b>06</b><h3>Shipped, not shelved</h3><p>I finish things and put them live, so the work can start working.</p></div>
+</div></section>
+<section class="sec" id="launch"><div class="tag">Checklist</div><h2>Is your website ready to launch?</h2><p class="pl">Tick what you already have and see how close you are.</p>
+<div class="ck" id="ck"><label><input type="checkbox">A clear headline that explains what you do</label><label><input type="checkbox">A strong call-to-action button</label><label><input type="checkbox">It works well on phones</label><label><input type="checkbox">Fast-loading pages</label><label><input type="checkbox">Contact or booking details</label><label><input type="checkbox">Titles and descriptions for search</label><label><input type="checkbox">Consistent colours and fonts</label><label><input type="checkbox">A live link to share</label></div>
+<div class="bar"><i id="cb"></i></div><div class="pct" id="ct">0 of 8 ready</div></section>
+<section class="sec rules" id="rules"><div class="tag">The rules</div><h2>Five rules of a great website.</h2><div style="margin-top:30px">
+<p>01 — Make the first five seconds unforgettable.</p><p>02 — Make the next step obvious everywhere.</p><p>03 — Let speed and clarity beat decoration.</p><p>04 — Design for the smallest screen first.</p><p>05 — Ship it, then keep making it better.</p></div></section>
+<section class="insp"><div class="tag">Mindset</div><h2><span>Discipline</span><span>over talent.</span></h2><p>I admire Cristiano Ronaldo for one thing above all: he turned work ethic into greatness. That is how I build. Show up daily, sweat the details, never settle for good enough.</p></section>
+<section class="sec faq" id="faq"><div class="tag">FAQ</div><h2>Good questions.</h2><div style="margin-top:30px">
+<div class="q"><button>What kinds of websites do you build?<span>+</span></button><div class="ans"><p>Storefronts with carts, booking and reservation sites, and interactive learning platforms, like the three live projects on this page.</p></div></div>
+<div class="q"><button>Will my site work on phones?<span>+</span></button><div class="ans"><p>Yes. I build every layout to adapt from small phone screens to wide desktop monitors.</p></div></div>
+<div class="q"><button>Where are your sites hosted?<span>+</span></button><div class="ans"><p>My live projects run on GitHub Pages, which keeps them fast, simple and easy to maintain.</p></div></div>
+<div class="q"><button>Can you add animation like this page?<span>+</span></button><div class="ans"><p>Absolutely. Scroll effects, reveals and hover details are some of my favourite parts of the job.</p></div></div>
+<div class="q"><button>Do you use ready-made templates?<span>+</span></button><div class="ans"><p>I design and code each site around the project itself, so it looks and feels like your brand rather than a copy of someone else’s.</p></div></div>
+<div class="q"><button>Can you redesign a website I already have?<span>+</span></button><div class="ans"><p>Yes. We can keep what works, rebuild what doesn’t, and give the whole thing a sharper look and better motion.</p></div></div>
+<div class="q"><button>What should I prepare before we start?<span>+</span></button><div class="ans"><p>Just your idea, your business details and any logo or colours you already use. We can shape the rest together.</p></div></div>
+<div class="q"><button>Do you work with small businesses?<span>+</span></button><div class="ans"><p>Yes. Small and growing businesses are exactly who I enjoy building for, because a great site can change how people find and trust them.</p></div></div>
+<div class="q"><button>Can you help with the wording on the site?<span>+</span></button><div class="ans"><p>Yes. I can help structure your content and tighten the copy so every page reads clearly and leads visitors to act.</p></div></div>
+<div class="q"><button>What if I need changes after launch?<span>+</span></button><div class="ans"><p>Message me and we’ll sort it out. A website should keep growing with your business.</p></div></div>
+<div class="q"><button>How do we get started?<span>+</span></button><div class="ans"><p>Email me at mohammed.affanvh@gmail.com or call +91 8129763926 with what you want to build, and we’ll take it from there.</p></div></div>
+</div></section>
+<section class="sec" id="next"><div class="tag">What happens next</div><h2>Three simple steps.</h2>
+<div class="st"><b>01</b><div><h3>Say hello</h3><p>Email or call me with your idea, even if it is only a rough one.</p></div></div>
+<div class="st"><b>02</b><div><h3>We shape the plan</h3><p>We agree what to build, who it is for and how it should feel.</p></div></div>
+<div class="st"><b>03</b><div><h3>I build, you approve</h3><p>You watch it come to life, and we polish it together until it is right.</p></div></div></section>
+<section class="cta" id="contact"><h2>Let’s build yours.</h2><p style="color:var(--mut)">Have an idea? I’ll turn it into a live website.</p><a class="btn p mag" href="https://github.com/mortifer-inferno" target="_blank" rel="noopener">Find me on GitHub</a><div class="cd"><a class="mag" href="mailto:mohammed.affanvh@gmail.com"><small>EMAIL</small>mohammed.affanvh@gmail.com</a><a class="mag" href="tel:+918129763926"><small>PHONE</small>+91 8129763926</a></div></section>
+</main>
+<footer>
+<div class="fg"><div><h5>MORTIFER</h5><p>Affan — web developer and builder. Designing, coding and shipping websites that feel premium.</p></div>
+<div><h5>PROJECTS</h5><a href="https://mortifer-inferno.github.io/my-shop-demo-advanced" target="_blank" rel="noopener">Modestia Dux</a><a href="https://mortifer-inferno.github.io/kayal-taxi" target="_blank" rel="noopener">Urban Cabs</a><a href="https://mortifer-inferno.github.io/oltera" target="_blank" rel="noopener">Oltera Language Studio</a></div>
+<div><h5>CONNECT</h5><a href="https://github.com/mortifer-inferno" target="_blank" rel="noopener">GitHub · mortifer-inferno</a><a href="mailto:mohammed.affanvh@gmail.com">mohammed.affanvh@gmail.com</a><a href="tel:+918129763926">+91 8129763926</a><a href="#work">Work</a><a href="#top" id="up">Back to top ↑</a></div></div>
+<div class="big" id="big">MORTIFER</div>
+<div class="cr">Designed, coded & built by <b>MORTIFER (Affan)</b> · Animations powered by GSAP · © 2026 All rights reserved</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+var pre=document.getElementById("pre");
+function split(el,w){var t=el.textContent;el.textContent="";var o=[];(w?t.split(" "):t.split("")).forEach(function(c,i,a){var s=document.createElement("span");s.textContent=c;if(w){s.className="w"}el.appendChild(s);if(w&&i<a.length-1)el.appendChild(document.createTextNode(" "));o.push(s)});return o}
+if(!window.gsap){pre.style.display="none";return}
+gsap.registerPlugin(ScrollTrigger);gsap.config({force3D:false});addEventListener("load",function(){ScrollTrigger.refresh();setTimeout(function(){ScrollTrigger.refresh()},2500)});
+var letters=split(document.getElementById("h1"));
+var words=split(document.getElementById("man"),true);
+var cnt={v:0},pc=document.getElementById("pc");
+document.body.style.overflow="hidden";var tl=gsap.timeline({onComplete:function(){document.body.style.overflow="";ScrollTrigger.refresh()}});
+tl.to(cnt,{v:100,duration:1.4,ease:"power2.inOut",onUpdate:function(){pc.textContent=Math.round(cnt.v)}})
+.to(pre,{yPercent:-100,duration:.9,ease:"power4.inOut"})
+.from(letters,{yPercent:120,rotateX:-90,opacity:0,duration:1.1,stagger:.06,ease:"power4.out"},"-=.3")
+.from(".hero .tag,.sub,.hero .btn,.scroll",{y:40,opacity:0,duration:.9,stagger:.12,ease:"power3.out"},"-=.7")
+.from("nav",{y:-80,opacity:0,duration:.7},"-=.8").add(function(){heroLoop()});
+gsap.to(".o1",{y:300,scrollTrigger:{trigger:"body",start:"top top",end:"bottom bottom",scrub:1}});
+gsap.to(".o2",{y:-300,scrollTrigger:{trigger:"body",start:"top top",end:"bottom bottom",scrub:1}});
+gsap.to("#prog",{scaleX:1,ease:"none",scrollTrigger:{trigger:"body",start:"top top",end:"bottom bottom",scrub:.3}});
+gsap.to("h1",{yPercent:-25,opacity:.15,scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
+gsap.to("#r1",{xPercent:-35,ease:"none",scrollTrigger:{trigger:".rows",start:"top bottom",end:"bottom top",scrub:1}});
+gsap.fromTo("#r2",{xPercent:-35},{xPercent:0,ease:"none",scrollTrigger:{trigger:".rows",start:"top bottom",end:"bottom top",scrub:1}});
+gsap.to(words,{opacity:1,stagger:.1,ease:"none",scrollTrigger:{trigger:".man",start:"top 75%",end:"bottom 55%",scrub:1}});
+gsap.from(".stat",{y:90,opacity:0,scale:.9,stagger:.15,duration:1,ease:"power3.out",scrollTrigger:{trigger:".stats",start:"top 85%"}});
+document.querySelectorAll("[data-n]").forEach(function(el){var o={v:0},n=+el.dataset.n;gsap.to(o,{v:n,duration:1.6,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 90%"},onUpdate:function(){el.textContent=Math.round(o.v)}})});
+gsap.from(".head h2,.head .tag",{y:70,opacity:0,stagger:.12,duration:1,scrollTrigger:{trigger:".head",start:"top 85%"}});
+var mm=gsap.matchMedia();
+mm.add("(min-width:821px)",function(){
+var tr=document.getElementById("track");
+var ht=gsap.to(tr,{x:function(){return -(tr.scrollWidth-innerWidth)},modifiers:{x:function(v){return Math.round(parseFloat(v))+"px"}},ease:"none",scrollTrigger:{trigger:".hs",start:"top top+=70",pin:true,scrub:1,invalidateOnRefresh:true,end:function(){return "+="+(tr.scrollWidth-innerWidth)}}});
+
+});
+mm.add("(max-width:820px)",function(){
+gsap.utils.toArray(".pan").forEach(function(p){gsap.from(p,{y:100,opacity:0,duration:1,scrollTrigger:{trigger:p,start:"top 88%"}})});
+});
+gsap.utils.toArray(".sec>.tag").forEach(function(h){gsap.from(h,{y:60,opacity:0,duration:.9,ease:"power3.out",scrollTrigger:{trigger:h,start:"top 90%"}})});
+gsap.from("#toolkit .tk span",{y:40,opacity:0,scale:.8,stagger:.05,duration:.7,ease:"back.out(1.7)",scrollTrigger:{trigger:"#toolkit .tk",start:"top 88%"}});
+gsap.utils.toArray(".dd").forEach(function(d){gsap.from(d.children,{y:60,opacity:0,stagger:.2,duration:.9,ease:"power3.out",scrollTrigger:{trigger:d,start:"top 85%"}})});
+gsap.from("#services .sv",{y:80,opacity:0,stagger:.12,duration:.9,ease:"power3.out",scrollTrigger:{trigger:"#services .sg",start:"top 85%"}});
+gsap.utils.toArray(".st").forEach(function(s){gsap.from(s,{x:-80,opacity:0,duration:.9,ease:"power3.out",scrollTrigger:{trigger:s,start:"top 88%"}})});
+gsap.utils.toArray(".story p").forEach(function(q){gsap.from(q,{y:50,opacity:0,duration:.9,ease:"power3.out",scrollTrigger:{trigger:q,start:"top 88%"}})});
+gsap.utils.toArray(".del>div").forEach(function(d,i){gsap.from(d,{y:50,opacity:0,duration:.8,delay:(i%2)*.1,ease:"power3.out",scrollTrigger:{trigger:d,start:"top 90%"}})});
+gsap.from("#principles .sv",{y:80,opacity:0,stagger:.1,duration:.9,ease:"power3.out",scrollTrigger:{trigger:"#principles .sg",start:"top 85%"}});
+gsap.from("#ways .sv",{y:80,opacity:0,stagger:.12,duration:.9,ease:"power3.out",scrollTrigger:{trigger:"#ways .sg",start:"top 85%"}});
+gsap.from(".cmp div",{x:-50,opacity:0,stagger:.1,duration:.7,ease:"power3.out",scrollTrigger:{trigger:".cmp",start:"top 85%"}});
+gsap.from(".ck label",{x:60,opacity:0,stagger:.07,duration:.6,ease:"power3.out",scrollTrigger:{trigger:".ck",start:"top 88%"}});
+(function(){var bx=document.querySelectorAll("#ck input"),bar=document.getElementById("cb"),tx=document.getElementById("ct");
+bx.forEach(function(b){b.addEventListener("change",function(){b.parentNode.classList.toggle("d",b.checked);var n=0;bx.forEach(function(x){if(x.checked)n++});gsap.to(bar,{width:(n/bx.length*100)+"%",duration:.5,ease:"power3.out"});tx.textContent=n===bx.length?"🚀 Ready to launch!":n+" of "+bx.length+" ready"})})})();
+gsap.from(".ind span",{y:40,opacity:0,scale:.85,stagger:.04,duration:.6,ease:"back.out(1.6)",scrollTrigger:{trigger:".ind",start:"top 88%"}});
+var PL={store:["Online store","Product catalogue","Cart with size and colour options","Smooth checkout flow","Reviews and feedback","Mobile-first layout","Search-friendly product pages"],book:["Booking site","Packages and pricing cards","Reservation form","Fleet or service showcase","Contact and enquiry flow","Local search content","Fast mobile experience"],learn:["Learning platform","Interactive practice tests","Progress and results","Checklists and study plans","Counselling or enquiry form","Light and dark themes","Clear course pages"],biz:["Business site","Strong hero and brand story","Services and pricing sections","Contact and map details","Trust and FAQ section","Search-friendly pages","Smooth scroll animation"],port:["Personal brand","Cinematic intro","Project showcase","About and story section","Social and contact links","Custom cursor and effects","Footer credits"]};
+function pr(k,a){var d=PL[k],ul=document.getElementById("pf");document.getElementById("pt").textContent=d[0];ul.innerHTML="";d.slice(1).forEach(function(t){var li=document.createElement("li");li.textContent=t;ul.appendChild(li)});if(a)gsap.from("#pf li",{y:20,opacity:0,stagger:.07,duration:.5})}
+pr("store",false);
+document.querySelectorAll("#pp button").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll("#pp button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");pr(b.dataset.k,true)})});
+gsap.from(".pbox",{y:60,opacity:0,duration:.9,scrollTrigger:{trigger:".pbox",start:"top 88%"}});
+gsap.utils.toArray(".rules p").forEach(function(r){gsap.to(r,{opacity:1,ease:"none",scrollTrigger:{trigger:r,start:"top 80%",end:"top 45%",scrub:true}})});
+gsap.from(".insp h2 span",{yPercent:100,opacity:0,stagger:.2,duration:1.1,ease:"power4.out",scrollTrigger:{trigger:".insp",start:"top 70%"}});
+gsap.from(".insp .tag,.insp p",{y:50,opacity:0,stagger:.2,duration:1,scrollTrigger:{trigger:".insp",start:"top 65%"}});
+gsap.utils.toArray(".q").forEach(function(q){var a=q.querySelector(".ans");q.querySelector("button").addEventListener("click",function(){var o=q.classList.toggle("o");gsap.to(a,{height:o?"auto":0,duration:.5,ease:"power3.inOut",onComplete:function(){ScrollTrigger.refresh()}})})});
+gsap.from(".q",{y:40,opacity:0,stagger:.1,duration:.8,scrollTrigger:{trigger:".faq",start:"top 85%"}});
+gsap.from(".cta h2,.cta p,.cta .btn",{y:80,opacity:0,stagger:.15,duration:1,scrollTrigger:{trigger:".cta",start:"top 80%"}});
+gsap.from(".fg>div",{y:60,opacity:0,stagger:.15,duration:.9,scrollTrigger:{trigger:"footer",start:"top 85%"}});
+var bl=split(document.getElementById("big"));gsap.from(bl,{yPercent:120,opacity:0,stagger:.06,duration:1,ease:"power4.out",clearProps:"transform,opacity",scrollTrigger:{trigger:"#big",start:"top 100%"}});
+var cur=document.getElementById("cur"),qx=gsap.quickTo(cur,"x",{duration:.12}),qy=gsap.quickTo(cur,"y",{duration:.12});
+var rg=document.getElementById("ring");gsap.set([cur,rg],{xPercent:-50,yPercent:-50,opacity:0});
+var rx=gsap.quickTo(rg,"x",{duration:.5,ease:"power3"}),ry=gsap.quickTo(rg,"y",{duration:.5,ease:"power3"});
+if(matchMedia("(pointer:fine)").matches)document.documentElement.classList.add("cc");
+var gl=document.getElementById("glow");gsap.set(gl,{xPercent:-50,yPercent:-50,x:innerWidth/2,y:innerHeight*.35});var gx=gsap.quickTo(gl,"x",{duration:.7,ease:"power3"}),gy=gsap.quickTo(gl,"y",{duration:.7,ease:"power3"});
+var ws=["I build websites that people remember.","Fashion. Travel. Education. Shipped live.","Designed, coded and launched by one person."],wi=0,ci=0,dl=false,tw=document.getElementById("tw");
+function tick(){var w=ws[wi];tw.textContent=w.slice(0,ci);if(!dl&&ci<w.length){ci++;setTimeout(tick,55)}else if(!dl){dl=true;setTimeout(tick,1500)}else if(ci>0){ci--;setTimeout(tick,25)}else{dl=false;wi=(wi+1)%ws.length;setTimeout(tick,300)}}
+setTimeout(tick,2600);
+var lx=0,ly=0,shown=false;addEventListener("pointermove",function(e){if(!shown){shown=true;gsap.to([cur,rg],{opacity:1,duration:.3})}qx(e.clientX);qy(e.clientY);gx(e.clientX);gy(e.clientY);rx(e.clientX);ry(e.clientY);if(Math.hypot(e.clientX-lx,e.clientY-ly)>16){lx=e.clientX;ly=e.clientY;trail(e.clientX,e.clientY)}});
+var over=false;
+document.addEventListener("pointerover",function(e){var h=!!e.target.closest("a,button");if(h===over)return;over=h;gsap.to(rg,{scale:h?1.9:1,backgroundColor:h?"rgba(255,90,54,.16)":"rgba(255,90,54,0)",duration:.3});gsap.to(cur,{scale:h?0:1,duration:.2})});
+document.addEventListener("pointerdown",function(){gsap.to(rg,{scale:.7,duration:.15})});
+document.addEventListener("pointerup",function(){gsap.to(rg,{scale:over?1.9:1,duration:.3})});
+document.documentElement.addEventListener("mouseleave",function(){gsap.to([cur,rg],{opacity:0,duration:.2})});
+document.documentElement.addEventListener("mouseenter",function(){gsap.to([cur,rg],{opacity:1,duration:.2})});
+function trail(px,py){var d=document.createElement("i");d.className="tr";document.body.appendChild(d);gsap.set(d,{x:px,y:py,xPercent:-50,yPercent:-50});gsap.to(d,{scale:0,opacity:0,y:py+22,duration:.8,ease:"power2.out",onComplete:function(){d.remove()}})}
+document.querySelectorAll(".mag").forEach(function(b){b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.35,y:(e.clientY-r.top-r.height/2)*.35,duration:.3})});b.addEventListener("pointerleave",function(){gsap.to(b,{x:0,y:0,duration:.6,ease:"elastic.out(1,.4)"})})});
+document.getElementById("up").addEventListener("click",function(e){e.preventDefault();window.scrollTo({top:0,behavior:"smooth"})});
+var h1=document.getElementById("h1"),hero=document.querySelector(".hero");
+function heroLoop(){
+h1.style.overflow="visible";h1.classList.add("pulse");
+gsap.to(letters,{yPercent:-8,duration:1.3,ease:"sine.inOut",repeat:-1,yoyo:true,stagger:.12});
+gsap.to(".scroll",{y:8,repeat:-1,yoyo:true,duration:.9,ease:"sine.inOut"});
+gsap.to(".o1",{x:120,duration:7,yoyo:true,repeat:-1,ease:"sine.inOut"});
+gsap.to(".o2",{x:-120,duration:8,yoyo:true,repeat:-1,ease:"sine.inOut"});
+}
+letters.forEach(function(l){
+l.addEventListener("pointerenter",function(){gsap.to(l,{rotation:gsap.utils.random(-14,14),scale:1.2,y:-16,duration:.25,overwrite:"auto"})});
+l.addEventListener("pointerleave",function(){gsap.to(l,{rotation:0,scale:1,y:0,duration:.9,ease:"elastic.out(1,.35)",overwrite:"auto"})});
+});
+gsap.set(h1,{transformPerspective:800});
+var tY=gsap.quickTo(h1,"rotationY",{duration:.7}),tX=gsap.quickTo(h1,"rotationX",{duration:.7});
+hero.addEventListener("pointermove",function(e){tY((e.clientX/innerWidth-.5)*14);tX(-(e.clientY/innerHeight-.5)*10)});
+hero.addEventListener("pointerleave",function(){tY(0);tX(0)});
+(function(){var el=document.querySelector(".hero .tag"),t=el.textContent,ch="ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&*",o={p:0};
+gsap.to(o,{p:1,duration:1.6,ease:"none",delay:2.6,onUpdate:function(){var n=Math.floor(o.p*t.length);el.textContent=t.slice(0,n)+t.slice(n).replace(/[^ ·&]/g,function(){return ch[Math.floor(Math.random()*ch.length)]})},onComplete:function(){el.textContent=t}})})();
+document.querySelectorAll(".sv,.stat,.pbox,.pan").forEach(function(c){
+c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;c.style.setProperty("--mx",px*100+"%");c.style.setProperty("--my",py*100+"%");if(!c.classList.contains("pan"))gsap.to(c,{rotationY:(px-.5)*12,rotationX:-(py-.5)*12,transformPerspective:800,duration:.4,overwrite:"auto"})});
+c.addEventListener("pointerleave",function(){gsap.to(c,{rotationX:0,rotationY:0,duration:.6,ease:"power3.out",overwrite:"auto"})});
+});
+gsap.utils.toArray(".sec>h2").forEach(function(h){var ws=split(h,true);gsap.from(ws,{yPercent:110,opacity:0,rotate:5,stagger:.08,duration:.9,ease:"power4.out",scrollTrigger:{trigger:h,start:"top 90%"}})});
+var sk=gsap.quickSetter(".row","skewX","deg"),tg=0,cu=0;
+ScrollTrigger.create({trigger:"body",start:"top top",end:"bottom bottom",onUpdate:function(st){tg=gsap.utils.clamp(-10,10,st.getVelocity()/-180)}});
+gsap.ticker.add(function(){cu+=(tg-cu)*.12;tg*=.9;sk(cu)});
+(function(){var sel=".stat,.pan,.sv,.del>div,.st,.q,.tk span,.pbox,.story p,.sec>.tag,.sec>h2 .w,.insp h2 span,.insp p,.insp .tag,.cta h2,.cta p,.cta .btn,.fg>div,#big span,.head h2,.head .tag,.cmp div,.ck label";
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;var el=en.target;setTimeout(function(){if(+getComputedStyle(el).opacity<.05){gsap.to(el,{opacity:1,x:0,y:0,xPercent:0,yPercent:0,scale:1,rotation:0,duration:.6,overwrite:"auto"})}},1400)})},{threshold:.15});
+document.querySelectorAll(sel).forEach(function(el){io.observe(el)})})();
+var cv=document.getElementById("bg"),x=cv.getContext("2d"),P=[];
+function rs(){cv.width=innerWidth;cv.height=innerHeight}rs();addEventListener("resize",rs);
+for(var i=0;i<60;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,v:.15+Math.random()*.5,r:Math.random()*1.8+.4});
+(function dr(){x.clearRect(0,0,cv.width,cv.height);x.fillStyle=getComputedStyle(document.documentElement).getPropertyValue("--a").trim()||"#ff5a36";x.globalAlpha=.5;P.forEach(function(p){p.y-=p.v;if(p.y<0){p.y=cv.height;p.x=Math.random()*cv.width}x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill()});requestAnimationFrame(dr)})();
+})();
+</script>
+</body>
+</html>
